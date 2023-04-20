@@ -1,0 +1,608 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+
+}
+
+body{
+    min-height: 100vh;
+    background: url(/Imagenes/D_gris.png) no-repeat;
+    background-size: 700px;
+    background-position: 50px 100px;
+    background-attachment: fixed;
+    
+    
+}
+
+/* Nav Bar */
+
+header{
+    background-color: rgba(41, 169, 225, 0.55);
+    /* background-color: transparent; */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    
+    
+
+}
+
+
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+    
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    cursor: pointer;
+    
+
+}
+.img-logo{
+    max-width:150px;
+    margin: 10px;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: rgb(102, 102, 102);
+
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+/* Nav bar corregida */
+
+@media(max-width:768px){
+    .navbar{
+        padding: 0 16px; /* Agregar padding para el botón hamburguesa */
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(41, 169, 225, 0.55);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        position: fixed; /* Agregar esta línea */
+        width: 100%; /* Asegurarse que ocupe el 100% del ancho */
+        
+        z-index: 999; /* Asegurarse que esté por encima de otros elementos */
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    body{
+        background-size: 300px;
+        background-position: 50px 100px;
+        background-attachment: fixed;
+    }
+}
+
+
+
+button{
+    margin-left: 20px;
+    padding: 7px 15px;
+    background-color: rgb(41, 169, 225);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 1px 8px 2px rgba(0,0,0,.4) ;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0, 130, 181, 0.8);
+}
+
+
+/* Seccion Portada Desarrollos */
+
+.prt-desarrolladora{
+    width: 100%;
+}
+
+.img-container {
+    width: 100%; /* Ancho del 100% para ajustarse al contenedor padre */
+    height: 0; /* Altura inicial de 0 para establecer el ratio */
+    padding-bottom: 56.25%; /* 16:9 = 9 / 16 * 100% = 56.25% */
+    max-width: 100%; /* Ancho máximo del 100% para que no exceda el contenedor padre */
+    overflow: hidden; /* Ocultar cualquier contenido que exceda el contenedor */
+    position: relative; /* Establecer posición relativa para el contenido interno */
+  }
+
+  .img-container img {
+    width: 100%; /* Ancho del 100% para ajustarse al contenedor padre */
+    height: 70%; /* Altura del 100% para ocupar todo el espacio disponible */
+    object-fit: cover; /* Establecer la imagen como fondo con recorte */
+    position: absolute; /* Establecer posición absoluta para ajustar la imagen */
+    top: 0;
+    left: 0;
+  }
+
+
+  /* Info desarrolladora */
+
+
+
+.container-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    width: 100%;
+    margin-top: -180px;
+    margin-bottom: 120px;
+}
+
+
+
+.logo-des-info{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    margin:40px;
+}
+
+.logo-des{
+    
+    width: 400px;
+}
+
+.texto-info{
+    flex-basis: 35%;
+    text-align: justify;
+    align-self: center;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px;
+    margin:  80px 100px;
+}
+
+.p-texto-info{
+    color: rgb(88, 89, 90);
+    margin: 10px;
+    padding: 10px;
+    line-height: 20px;
+}
+
+
+.img-info-container{
+    flex-basis: 60%;
+    text-align: center;
+}
+
+.img-info-des{
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 0px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Eslogan */
+
+.eslogan-des{
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    background-color: rgb(153, 153, 153);
+    /* margin-bottom: 100px; */
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.texto-eslogan{
+    margin: 50px;
+}
+
+
+/* Contacto Inicio */
+
+.contacto{
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    /* width: 100%;   */
+    /* background-image: url(/Imagenes/Stickers/fondo\ contacto.png);  */
+   /* background-repeat: no-repeat;  */
+    /* background-size: 320px 3000px;
+    background-position: 100%; */
+    
+}
+
+
+
+
+.formulario{
+margin: 125px;
+width: 50%;
+padding: 20px;
+font-family: "Montserrat" , sans-serif;
+font-weight: 400;
+font-size: 15px;
+z-index: 4;
+
+}
+
+.form-text-titulo{
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+    color: rgb(88, 89, 90);
+}
+
+.form-text{
+    margin-bottom: 30px;
+    color: rgb(88, 89, 90);
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* label {
+    display: block;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+  } */
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 15px; 
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    box-sizing: border-box;
+    border:none;
+    background-color: rgba(230, 230, 230,0.3);
+  }
+  
+
+
+
+.enviar{
+    width: 33rem;
+    height: 45px;
+}
+
+  
+.info{
+
+width: 40%;
+background-color: rgba(37, 35, 36, 0.25);
+border-radius: 30px 0px 0px 30px ;
+height: auto;
+
+z-index: 4;
+}
+
+/* .rec-fondo{
+    width: 100px;
+    height: 200px;
+    background-color: rgb(41, 169, 225); 
+   
+    
+} */
+
+.info-list{
+padding: 30px;
+margin: 20px;    
+}
+
+.info-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    list-style: none;
+    margin: 30px;
+}
+
+.sticker-info{
+    margin: 5px;
+    padding: 5px;
+    width: 38px;
+}
+
+/* Section Footer */
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(77, 77, 77);
+    padding: 60px;
+}
+
+.footer-logo{
+    margin: 20px;
+}
+
+.footer-logo-img{
+    max-width: 200px;
+    height: auto;
+}
+
+.ftr-sticker{
+    max-width: 25px;
+    height: auto;
+}
+
+.ftr-1-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+
+.footer-texto{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.footer-titulo{
+    color: rgb(0, 174, 239);
+    margin-bottom: 15px;
+}
+
+.footer-stickers{
+    margin: 20px;
+}
+
+/* Estilos para pantallas medianas  formulario */
+@media screen and (max-width: 768px) {
+    
+    .contacto{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .formulario {
+        margin: 50px;
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .info-items {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .sticker-info {
+        margin: 5px;
+        padding: 5px;
+        width: 28px;
+    }
+
+    .enviar{
+        
+        width: 15rem;
+        height: 45px;
+    }
+
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        max-width: 100%;
+    }
+    
+    .footer1, .footer2, .footer3, .footer4{
+        margin: 10px;
+    }
+
+    .footer4{
+        display: flex;
+        flex-direction: row ;
+    }
+    
+}
+
+/* Estilos para pantallas pequeñas formulario */
+@media screen and (max-width: 576px) {
+    .formulario {
+        /* margin: 20px; */
+        width: 100%;
+        font-size: 14px;
+    }
+
+    
+
+    .enviar{
+        width: 12rem;
+        height: 45px;
+    }
+}
+
+
+
+
+/* Contacto Final */
+
+
+
+@media(max-width:786px){
+    .container-info {
+        margin-top: 40px;
+        
+    }
+
+    .logo-des-info{
+        margin: 40px 20px 20px 20px;
+    }
+
+    .logo-des{
+        max-width: 300px;
+    }
+
+    .texto-info{
+        margin: 0px 50px 20px 50px;
+    }
+    
+    .img-info-des{
+        margin-top: 10px ;
+    }
+
+   
+
+}
+
+/* Estilos adicionales para dispositivos responsivos */
+@media (min-width: 768px) {
+    .container-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+
+}
+
+@media(max-width:1180px){
+
+    .container-info {
+        margin-top: -100px;
+        
+    }
+
+    .contenido-info{
+        display: block;
+    }
+
+    .form-text-titulo{
+        align-items: center;
+        margin: 40px 20px 20px 20px;
+    }
+
+    .logo-des{
+        max-width: 300px;
+    }
+
+    .texto-info{
+        margin: 0px 50px 20px 50px;
+    }
+
+    .img-info-des{
+        margin-top: 100px;
+    }
+
+    .contacto{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .formulario {
+        margin: 40px;
+        width: 80%;
+    }
+
+    .info {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .info-items {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .sticker-info {
+        margin: 5px;
+        padding: 5px;
+        width: 28px;
+    }
+
+    .enviar{
+        
+        width: 15rem;
+        height: 45px;
+    }
+}

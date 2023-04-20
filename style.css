@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    
+    background-image: url(Imagenes/D_gris.png);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 50px 100px;
+    background-attachment: fixed;
+}
+
+
+li, a, button{
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+}
+
+/* Barra Navegacion Inicio */
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: rgba(170, 170, 170, 0.65);
+}
+
+.logo{
+    cursor: pointer;
+    margin-inline-end: auto;
+    max-height: 50px;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: rgb(102, 102, 102);
+}
+
+.submenu{
+    position: absolute;
+    background-color: rgba(170, 170, 170, 0.65);
+    top:70px;
+    width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s;
+    z-index: 1;
+}
+
+.submenu li a{
+    display: block;
+    padding: 21px;
+}
+
+.nav-links li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+button{
+    margin-left: 20px;
+    padding: 7px 15px;
+    background-color: rgb(251, 191, 27);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 1px 8px 2px rgba(0,0,0,.4) ;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(199, 152, 21, 0.8);
+}
+
+/* Barra Navegacion final */
+
+/* Carrucel inicio */
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.slider-wrapper{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 3/1.1;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3 rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider img {
+    /* animation: slider-animation 5s infinite; */
+    animation: slide 5s ease-in-out infinite;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slider-animation {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}
+
+.slider-nav a{
+    width: 1rem;
+    height: 0.5rem;
+    border-radius: 30%;
+}
+
+.slider-nav .sl1{
+    background-color: rgb(230, 34, 126);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav .sl2{
+    background-color:rgb(186, 209, 91);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav .sl3{
+    background-color:rgb(41, 169, 225);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}.slider-nav .sl4{
+    background-color: rgb(239, 130, 128);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* Carrusel final */
+
+
+  
+
+
+/* Quienes Somos */
+
+.container-qs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 25px;
+        
+}
+
+.qs-texto{
+    flex-basis: 35%;
+    text-align: justify;
+    align-self: center;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px;
+    margin: 80px;
+}
+
+.qs-p{
+    margin: 10px;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.qs-img{
+    flex-basis: 60%;
+    text-align: center;
+}
+
+.qs-img-objeto{
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 0px 5px;
+}
+
+.boton-pdf{
+    text-align: center;
+}
+
+/* Quienes Somos Final */
+
+/* Por que elegirnos */
+
+.container-pqe{
+    width: 100%;
+    height: 80%;
+    box-shadow: 1px 1px 8px 2px rgba(0,0,0,.4) ;
+   
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 100px 50px 100px;
+    background-color: white;
+  }
+
+.pqe-titulo{
+    text-align: center;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 40;
+    background-color: white;
+    padding: 40px;
+  }
+
+.stickers-pqe{
+    width: 160px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.card{
+    display: flex;
+    width: 48%;
+    padding: 5px;
+    /* margin-bottom: 20px; */
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: justify;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Por que elegirnos final */
+
+/* Contacto Inicio */
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;   
+    background-image: url(/Imagenes/Stickers/fondo\ contacto.png);
+    background-repeat: no-repeat;
+    background-size: 320px 3000px;
+    background-position: 100%;
+    
+}
+
+.formulario{
+margin: 125px;
+width: 50%;
+padding: 20px;
+font-family: "Montserrat" , sans-serif;
+font-weight: 400;
+font-size: 15px;
+}
+
+.form-text-titulo{
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+
+
+}
+
+.form-text{
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* label {
+    display: block;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+  } */
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 15px; 
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    box-sizing: border-box;
+    border:none;
+    background-color: rgba(230, 230, 230,0.3);
+  }
+  
+
+
+
+.enviar{
+    width: 33rem;
+    height: 45px;
+}
+
+  
+.info{
+
+width: 40%;
+background-color: rgba(37, 35, 36, 0.25);
+border-radius: 30px 0px 0px 30px ;
+height: auto;
+}
+
+.info-list{
+padding: 30px;
+margin: 20px;    
+}
+
+.info-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    list-style: none;
+    margin: 30px;
+}
+
+.sticker-info{
+    margin: 5px;
+    padding: 5px;
+    width: 38px;
+}
+
+
+
+/* Contacto Final */
+
+/* Footer Inicio */
+
+/* .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    background-color: rgb(102, 102, 102);
+
+}
+
+.footer-tittle{
+    font-family: "Montserrat" , sans-serif;
+    color: rgb(251, 191, 27)
+}
+
+.f-section-1{
+    text-align: justify;
+}
+
+.footer-logo{
+    cursor: pointer;
+    margin-inline-end: auto;
+    max-height: 50px;
+
+}
+
+.footer-text{
+    font-family: "Montserrat" , sans-serif;
+    color: white;
+}
+
+.item-text{
+    list-style: none;
+}
+
+
+.f-section-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: justify;
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Final */
+
+
